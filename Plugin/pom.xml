@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.kitteh</groupId>
+  <artifactId>abstractionexampleplugin</artifactId>
+  <packaging>jar</packaging>
+  <name>AbstractionExamplePlugin</name>
+  <version>1.0.0-SNAPSHOT</version> <!-- This is where I track the version -->
+
+  <repositories>
+    <repository>
+      <id>bukkit-repo</id>
+      <url>http://repo.bukkit.org/content/groups/public</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.kitteh</groupId>
+      <artifactId>abstractionexampleplugin-prerefactor</artifactId>
+      <version>pre</version>
+      <type>jar</type>
+      <optional>true</optional> <!-- Set all of these to optional, to ensure plugins building against yours don't look for them -->
+    </dependency>
+    <dependency>
+      <groupId>org.kitteh</groupId>
+      <artifactId>abstractionexampleplugin-v1_4_5</artifactId>
+      <version>v1_4_5</version>
+      <type>jar</type>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.kitteh</groupId>
+      <artifactId>abstractionexampleplugin-api</artifactId>
+      <version>API</version>
+      <type>jar</type>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>LATEST</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <directory>../target</directory> <!-- Build it one level up, because it is the one we care about -->
+    <finalName>AbstractionExamplePlugin</finalName>
+    <resources>
+      <resource>
+        <targetPath>.</targetPath>
+        <filtering>true</filtering>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>plugin.yml</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>org.kitteh:abstractionexampleplugin*</include>
+                </includes>
+              </artifactSet>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

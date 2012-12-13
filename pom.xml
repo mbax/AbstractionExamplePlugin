@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.kitteh</groupId>
+  <artifactId>abstractionexampleplugin-parent</artifactId>
+  <!-- Artifact ID doesn't matter for anything but the final product
+       At least, it doesn't matter externally to this setup -->
+  <packaging>pom</packaging>
+  <!-- Packaging? POM -->
+  <version>parent</version>
+  <!-- I keep my versions of the internal projects static, so I don't have to rename them all the time. -->
+  <name>AbstractionExamplePlugin Parent</name>
+  <url>http://kitteh.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <modules>
+    <module>API</module>
+    <module>PreRefactor</module>
+    <module>v1_4_5</module>
+    <module>Plugin</module>
+  </modules>
+
+  <!-- Define the repo here since multiple modules will be using it -->
+  <repositories>
+    <repository>
+      <id>bukkit-repo</id>
+      <url>http://repo.bukkit.org/content/groups/public</url>
+    </repository>
+  </repositories>
+
+</project>

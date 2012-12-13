@@ -1,0 +1,23 @@
+= Example Abstraction Plugin (with Maven!)
+
+=== Necessary to add support for a new version (example: v1_4_6)
+
+1) Create new folder for new module
+
+2) Create new pom.xml for that folder (base it on existing implementation module poms)
+
+3) Implement the interface at org.kitteh.example.plugin.nms.v1_4_6.NMSHandler 
+
+4) Add reference in parent pom.xml
+
+5) Add dependency in Plugin/pom.xml
+
+6) Build!
+
+\\
+\\
+\\
+
+You may use any of this in your own plugin. I would prefer that you give me some form of credit but that is not necessary.
+
+I'm just happy to contribute toward better compatibility in plugins

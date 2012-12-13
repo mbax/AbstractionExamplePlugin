@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.kitteh</groupId>
+  <artifactId>abstractionexampleplugin-v1_4_5</artifactId>
+  <packaging>jar</packaging>
+  <name>Abstraction Example Plugin implementation v1_4_5</name>
+  <version>v1_4_5</version>
+
+  <parent>
+    <groupId>org.kitteh</groupId>
+    <artifactId>abstractionexampleplugin-parent</artifactId>
+    <version>parent</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>craftbukkit</artifactId>
+      <version>1.4.5-R0.3-SNAPSHOT</version> <!-- Once an RB or beta comes out, I'd lock this to a better version -->
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.kitteh</groupId>
+      <artifactId>abstractionexampleplugin-api</artifactId> <!-- Depend on the API! -->
+      <version>API</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+</project>

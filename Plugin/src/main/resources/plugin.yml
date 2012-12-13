@@ -1,0 +1,5 @@
+name: AbstractionExamplePlugin
+main: org.kitteh.example.plugin.MyPlugin
+author: mbaxter
+description: Example Abstraction Plugin
+version: '${project.version}'
