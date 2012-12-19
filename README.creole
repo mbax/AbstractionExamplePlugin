@@ -1,5 +1,7 @@
 = Example Abstraction Plugin (with Maven!)
 
+**MORE INFORMATION HERE** http://forums.bukkit.org/threads/115810/
+
 === Necessary to add support for a new version (example: v1_4_6)
 
 1) Create new folder for new module
