@@ -17,7 +17,7 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>craftbukkit</artifactId>
-      <version>1.4.5-R0.3-SNAPSHOT</version> <!-- Once an RB or beta comes out, I'd lock this to a better version -->
+      <version>1.4.5-R1.0</version>
       <type>jar</type>
     </dependency>
     <dependency>
