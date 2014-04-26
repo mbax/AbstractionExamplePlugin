@@ -22,4 +22,4 @@
 
 You may use any of this in your own plugin. I would prefer that you give me some form of credit but that is not necessary.
 
-I'm just happy to contribute toward better compatibility in plugins
+I'm just happy to contribute toward better compatibility in plugins.
