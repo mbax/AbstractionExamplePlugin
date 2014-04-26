@@ -17,8 +17,9 @@
 
   <modules>
     <module>API</module>
-    <module>PreRefactor</module>
-    <module>v1_4_5</module>
+    <module>v1_7_R1</module>
+    <module>v1_7_R2</module>
+    <module>v1_7_R3</module>
     <module>Plugin</module>
   </modules>
 

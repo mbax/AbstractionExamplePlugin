@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.kitteh</groupId>
-  <artifactId>abstractionexampleplugin-v1_4_5</artifactId>
+  <artifactId>abstractionexampleplugin-v1_7_R3</artifactId>
   <packaging>jar</packaging>
-  <name>Abstraction Example Plugin implementation v1_4_5</name>
-  <version>v1_4_5</version>
+  <name>Abstraction Example Plugin implementation v1_7_R3</name>
+  <version>v1_7_R3</version>
 
   <parent>
     <groupId>org.kitteh</groupId>
@@ -17,8 +17,9 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>craftbukkit</artifactId>
-      <version>1.4.5-R1.0</version>
+      <version>1.7.9-R0.1-SNAPSHOT</version>
       <type>jar</type>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.kitteh</groupId>

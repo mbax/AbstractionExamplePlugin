@@ -1,7 +1,7 @@
 package org.kitteh.example.plugin.api;
 
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.entity.Player;
 
 public interface NMS {
-    public void setName(ItemStack stack, String name);
+    public void sendMessage(Player player, String message);
 }

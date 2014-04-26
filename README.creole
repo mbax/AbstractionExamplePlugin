@@ -2,13 +2,13 @@
 
 **MORE INFORMATION HERE** http://forums.bukkit.org/threads/115810/
 
-=== Necessary to add support for a new version (example: v1_4_6)
+=== Necessary to add support for a new version (example: v1_7_R1)
 
 1) Create new folder for new module
 
 2) Create new pom.xml for that folder (base it on existing implementation module poms)
 
-3) Implement the interface at org.kitteh.example.plugin.nms.v1_4_6.NMSHandler 
+3) Implement the interface at org.kitteh.example.plugin.nms.v1_7_R1.NMSHandler
 
 4) Add reference in parent pom.xml
 

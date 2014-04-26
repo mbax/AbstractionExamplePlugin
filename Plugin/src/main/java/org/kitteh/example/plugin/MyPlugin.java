@@ -14,12 +14,10 @@ public class MyPlugin extends JavaPlugin {
     public void onEnable() {
         String packageName = this.getServer().getClass().getPackage().getName();
         // Get full package string of CraftServer.
-        // org.bukkit.craftbukkit.versionstring (or for pre-refactor, just org.bukkit.craftbukkit
+        // org.bukkit.craftbukkit.version
         String version = packageName.substring(packageName.lastIndexOf('.') + 1);
         // Get the last element of the package
-        if (version.equals("craftbukkit")) { // If the last element of the package was "craftbukkit" we are now pre-refactor
-            version = "pre";
-        }
+
         try {
             final Class<?> clazz = Class.forName("org.kitteh.example.plugin.nms." + version + ".NMSHandler");
             // Check if we have a NMSHandler class at that location.
@@ -27,21 +25,20 @@ public class MyPlugin extends JavaPlugin {
                 this.nmsHandler = (NMS) clazz.getConstructor().newInstance(); // Set our handler
             }
         } catch (final Exception e) {
+            e.printStackTrace();
             this.getLogger().severe("Could not find support for this CraftBukkit version.");
             this.getLogger().info("Check for updates at URL HERE");
             this.setEnabled(false);
             return;
         }
-        this.getLogger().info("Loading support for " + (version.equals("pre") ? "v1_4_5_pre" : version));
+        this.getLogger().info("Loading support for " + version);
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if (player.getItemInHand() != null && args.length > 0) {
-                this.nmsHandler.setName(player.getItemInHand(), this.combineSplit(args));
-            }
+            this.nmsHandler.sendMessage(player, this.combineSplit(args));
         }
         return true;
     }
@@ -59,4 +56,5 @@ public class MyPlugin extends JavaPlugin {
         builder.setLength(builder.length() - 1);
         return builder.toString();
     }
+
 }

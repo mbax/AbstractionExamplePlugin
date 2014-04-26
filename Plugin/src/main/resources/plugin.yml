@@ -3,3 +3,7 @@ main: org.kitteh.example.plugin.MyPlugin
 author: mbaxter
 description: Example Abstraction Plugin
 version: '${project.version}'
+commands:
+  example:
+    description: Example command
+    usage: /example message here
